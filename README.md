@@ -1,4 +1,4 @@
-# CGeIHC_319239504Autor: Tu Nombre
-Fecha: DD/MM/AAAA
-Computacion Grafica e Interaccion Humno Computadora
-REPOSITORIO: Control de versiones
+# CGeIHC_319239504: Samuel Chong Hernandez
+**Fecha:** 14/02/2025
+**Computacion Grafica e Interaccion Humno Computadora**
+**REPOSITORIO:** Control de versiones
