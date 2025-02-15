@@ -1,4 +1,2 @@
-# CGeIHC_319239504Autor: Tu Nombre
-Fecha: DD/MM/AAAA
-Computacion Grafica e Interaccion Humno Computadora
-REPOSITORIO: Control de versiones
+# CGeIHC_319239504Autor: Samuel Chong Hernández
+## Practica 1
