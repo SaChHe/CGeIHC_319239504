@@ -357,7 +357,7 @@ int main()
 		camera.mouseControl(mainWindow.getXChange(), mainWindow.getYChange());
 
 		//Limpiar la ventana
-		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+		glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); //Se agrega limpiar el buffer de profundidad
 		shaderList[0].useShader();
 		uniformModel = shaderList[0].getModelLocation();
@@ -390,94 +390,124 @@ int main()
 		model = glm::mat4(1.0f);
 		color=glm::vec3(0.0f,0.0f,1.0f);
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
-		//Opcional duplicar esta traslación inicial para posicionar en -Z a los objetos en el mismo punto
-		//model = glm::translate(model, glm::vec3(0.0f, 0.0f, -3.0f));
-		model = glm::translate(model, glm::vec3(0.0f, 0.65f, -3.0f));
+		model = glm::translate(model, glm::vec3(0.0f, 0.62f, -3.0f));
 		model = glm::scale(model, glm::vec3(1.0f, 0.5f, 1.0f));
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));//FALSE ES PARA QUE NO SEA TRANSPUESTA
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		meshList[4]->RenderMeshGeometry();
 		
 		//piso
 		model = glm::mat4(1.0f);
 		color = glm::vec3(0.0f, 0.128f, 0.0f);
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
-		//Opcional duplicar esta traslación inicial para posicionar en -Z a los objetos en el mismo punto
-		//model = glm::translate(model, glm::vec3(0.0f, 0.0f, -3.0f));
 		model = glm::translate(model, glm::vec3(0.0f, -0.65f, -3.0f));
 		model = glm::scale(model, glm::vec3(3.0f, 0.0f, 1.0f));
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));//FALSE ES PARA QUE NO SEA TRANSPUESTA
-		meshList[4]->RenderMesh();
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		meshList[4]->RenderMeshGeometry();
 
 		//cubo verde inferior
 		model = glm::mat4(1.0f);
 		color = glm::vec3(0.0f, 1.0f, 0.0f);
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
-		//Opcional duplicar esta traslación inicial para posicionar en -Z a los objetos en el mismo punto
-		//model = glm::translate(model, glm::vec3(0.0f, 0.0f, -3.0f));
 		model = glm::translate(model, glm::vec3(0.0f, -0.5f, -2.55f));
 		model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));//FALSE ES PARA QUE NO SEA TRANSPUESTA
-		meshList[0]->RenderMesh();
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		meshList[0]->RenderMeshGeometry();
+
+		//ventanas frontales
+		
+		model = glm::mat4(1.0f);
+		color = glm::vec3(0.0f, 1.0f, 0.0f);
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		model = glm::translate(model, glm::vec3(0.25f, 0.15f, -2.55f));
+		model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		meshList[0]->RenderMeshGeometry();
 
 		model = glm::mat4(1.0f);
 		color = glm::vec3(0.0f, 1.0f, 0.0f);
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
-		//Opcional duplicar esta traslación inicial para posicionar en -Z a los objetos en el mismo punto
-		//model = glm::translate(model, glm::vec3(0.0f, 0.0f, -3.0f));
-		model = glm::translate(model, glm::vec3(0.2f, 0.15f, -2.55f));
+		model = glm::translate(model, glm::vec3(-0.25f, 0.15f, -2.55f));
 		model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));//FALSE ES PARA QUE NO SEA TRANSPUESTA
-		meshList[0]->RenderMesh();
-
-		model = glm::mat4(1.0f);
-		color = glm::vec3(0.0f, 1.0f, 0.0f);
-		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
-		//Opcional duplicar esta traslación inicial para posicionar en -Z a los objetos en el mismo punto
-		//model = glm::translate(model, glm::vec3(0.0f, 0.0f, -3.0f));
-		model = glm::translate(model, glm::vec3(-0.2f, 0.15f, -2.55f));
-		model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));//FALSE ES PARA QUE NO SEA TRANSPUESTA
-		meshList[0]->RenderMesh();
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		meshList[0]->RenderMeshGeometry();
 
 		model = glm::mat4(1.0f);
 		color = glm::vec3(0.128f, 0.128f, 0.0f);
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
-		//Opcional duplicar esta traslación inicial para posicionar en -Z a los objetos en el mismo punto
-		//model = glm::translate(model, glm::vec3(0.0f, 0.0f, -3.0f));
 		model = glm::translate(model, glm::vec3(-0.8f, -0.55f, -3.0f));
 		model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));//FALSE ES PARA QUE NO SEA TRANSPUESTA
-		meshList[0]->RenderMesh();
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		meshList[0]->RenderMeshGeometry();
 
 		model = glm::mat4(1.0f);
 		color = glm::vec3(0.128f, 0.128f, 0.0f);
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
-		//Opcional duplicar esta traslación inicial para posicionar en -Z a los objetos en el mismo punto
-		//model = glm::translate(model, glm::vec3(0.0f, 0.0f, -3.0f));
 		model = glm::translate(model, glm::vec3(0.8f, -0.55f, -3.0f));
 		model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));//FALSE ES PARA QUE NO SEA TRANSPUESTA
-		meshList[0]->RenderMesh();
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		meshList[0]->RenderMeshGeometry();
 
 		model = glm::mat4(1.0f);
 		color = glm::vec3(0.0f, 1.0f, 0.0f);
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
-		//Opcional duplicar esta traslación inicial para posicionar en -Z a los objetos en el mismo punto
-		//model = glm::translate(model, glm::vec3(0.0f, 0.0f, -3.0f));
 		model = glm::translate(model, glm::vec3(0.8f, -0.2f, -3.0f));
 		model = glm::scale(model, glm::vec3(0.1f, 0.5f, 0.2f));
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));//FALSE ES PARA QUE NO SEA TRANSPUESTA
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		meshList[3]->RenderMeshGeometry();
 
 		model = glm::mat4(1.0f);
 		color = glm::vec3(0.0f, 1.0f, 0.0f);
 		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
-		//Opcional duplicar esta traslación inicial para posicionar en -Z a los objetos en el mismo punto
-		//model = glm::translate(model, glm::vec3(0.0f, 0.0f, -3.0f));
 		model = glm::translate(model, glm::vec3(-0.8f, -0.2f, -3.0f));
 		model = glm::scale(model, glm::vec3(0.1f, 0.5f, 0.2f));
-		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));//FALSE ES PARA QUE NO SEA TRANSPUESTA
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 		meshList[3]->RenderMeshGeometry();
+
+		
+
+		//ventanas lterales izquierda
+		model = glm::mat4(1.0f);
+		color = glm::vec3(0.0f, 1.0f, 0.0f);
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		model = glm::translate(model, glm::vec3(-0.45f, 0.14f, -2.7f));
+		model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		meshList[0]->RenderMeshGeometry();
+
+		model = glm::mat4(1.0f);
+		color = glm::vec3(0.0f, 1.0f, 0.0f);
+		model = glm::translate(model, glm::vec3(-0.45f, 0.12f, -3.3f));
+		model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		meshList[0]->RenderMeshGeometry();
+
+		//ventanas lterales derechas
+		model = glm::mat4(1.0f);
+		color = glm::vec3(0.0f, 1.0f, 0.0f);
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		model = glm::translate(model, glm::vec3(0.45f, 0.12f, -2.7f));
+		model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		meshList[0]->RenderMeshGeometry();
+
+		model = glm::mat4(1.0f);
+		color = glm::vec3(0.0f, 1.0f, 0.0f);
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		model = glm::translate(model, glm::vec3(0.45f, 0.15f, -3.3f));
+		model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		meshList[0]->RenderMeshGeometry();
+
+		//esfera posterior azul
+		model = glm::mat4(1.0f);
+		color = glm::vec3(0.0f, 0.0f, 1.0f);
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, -3.35f));
+		model = glm::scale(model, glm::vec3(0.3f, 0.3f, 0.3f));
+		glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+		sp.render();
+
+
 
 
 		glUseProgram(0);
