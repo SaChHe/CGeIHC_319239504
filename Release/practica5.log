@@ -1,0 +1,52 @@
+﻿  Camera.cpp
+  DirectionalLight.cpp
+  Light.cpp
+  Material.cpp
+  Mesh_tn.cpp
+  Model.cpp
+C:\Users\samyc\source\repos\practica5\practica5\Camera.h(3,10): error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  (compilando archivo de origen "Camera.cpp")
+  
+C:\Users\samyc\source\repos\practica5\practica5\Light.h(3,10): error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  (compilando archivo de origen "DirectionalLight.cpp")
+  
+C:\Users\samyc\source\repos\practica5\practica5\Light.h(3,10): error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  (compilando archivo de origen "Light.cpp")
+  
+C:\Users\samyc\source\repos\practica5\practica5\Material.h(3,10): error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  (compilando archivo de origen "Material.cpp")
+  
+C:\Users\samyc\source\repos\practica5\practica5\Mesh.h(3,10): error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  (compilando archivo de origen "Mesh_tn.cpp")
+  
+C:\Users\samyc\source\repos\practica5\practica5\Model.h(4,9): error C1083: No se puede abrir el archivo incluir: 'assimp/Importer.hpp': No such file or directory
+  (compilando archivo de origen "Model.cpp")
+  
+  PointLight.cpp
+C:\Users\samyc\source\repos\practica5\practica5\Light.h(3,10): error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  (compilando archivo de origen "PointLight.cpp")
+  
+  practica5.cpp
+\practica5.cpp(1,1): error C1083: No se puede abrir el archivo origen: 'practica5.cpp': No such file or directory
+  (compilando archivo de origen "/practica5.cpp")
+  
+  Shader_m.cpp
+C:\Users\samyc\source\repos\practica5\practica5\Shader_m.h(7,10): error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  (compilando archivo de origen "Shader_m.cpp")
+  
+  Skybox.cpp
+C:\Users\samyc\source\repos\practica5\practica5\Skybox.h(6,9): error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  (compilando archivo de origen "Skybox.cpp")
+  
+  Sphere.cpp
+C:\Users\samyc\source\repos\practica5\practica5\definition.h(11,10): error C1083: No se puede abrir el archivo incluir: 'glm.hpp': No such file or directory
+  (compilando archivo de origen "Sphere.cpp")
+  
+  SpotLight.cpp
+C:\Users\samyc\source\repos\practica5\practica5\Light.h(3,10): error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  (compilando archivo de origen "SpotLight.cpp")
+  
+  Window.cpp
+C:\Users\samyc\source\repos\practica5\practica5\Window.h(3,9): error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  (compilando archivo de origen "Window.cpp")
+  
