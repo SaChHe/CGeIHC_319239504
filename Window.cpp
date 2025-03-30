@@ -13,10 +13,7 @@ Window::Window(GLint windowWidth, GLint windowHeight)
 {
 	width = windowWidth;
 	height = windowHeight;
-	rotax = 0.0f;
-	rotay = 0.0f;
-	rotaz = 0.0f;
-	
+	muevex = 2.0f;
 	for (size_t i = 0; i < 1024; i++)
 	{
 		keys[i] = 0;
@@ -39,8 +36,8 @@ int Window::Initialise()
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
 	//CREAR VENTANA
-	mainWindow = glfwCreateWindow(width, height, "Practica 05: optimizacion y carga de modelos", NULL, NULL);
-
+	mainWindow = glfwCreateWindow(width, height, "Practica 06: Texturizado", NULL, NULL);
+	
 	if (!mainWindow)
 	{
 		printf("Fallo en crearse la ventana con GLFW");
@@ -82,7 +79,6 @@ void Window::createCallbacks()
 	glfwSetKeyCallback(mainWindow, ManejaTeclado);
 	glfwSetCursorPosCallback(mainWindow, ManejaMouse);
 }
-
 GLfloat Window::getXChange()
 {
 	GLfloat theChange = xChange;
@@ -97,6 +93,9 @@ GLfloat Window::getYChange()
 	return theChange;
 }
 
+
+
+
 void Window::ManejaTeclado(GLFWwindow* window, int key, int code, int action, int mode)
 {
 	Window* theWindow = static_cast<Window*>(glfwGetWindowUserPointer(window));
@@ -105,56 +104,39 @@ void Window::ManejaTeclado(GLFWwindow* window, int key, int code, int action, in
 	{
 		glfwSetWindowShouldClose(window, GL_TRUE);
 	}
-
-	
-	
 	if (key == GLFW_KEY_Y)
 	{
-		theWindow->mueve_llanta_1 += 40.0;//llanta hacia adelante
+		theWindow-> muevex += 1.0;
 	}
 	if (key == GLFW_KEY_U)
 	{
-		theWindow->mueve_llanta_1 -= 10.0;//llanta hacia atras
+		theWindow-> muevex -= 1.0;
 	}
-	if (key == GLFW_KEY_O)
+
+	if (key == GLFW_KEY_V)
 	{
-		if (theWindow->mueve_cofre < -30.0)
+		if (theWindow->angulocola > 40.0)
 		{
 		}
-		else {
-			theWindow->mueve_cofre -= 10.0;
+		else
+		{
+			theWindow->angulocola += 10.0;
 		}
 	}
-	if (key == GLFW_KEY_P) 
+
+	if (key == GLFW_KEY_B)
 	{
-			if (theWindow->mueve_cofre > 1.0) {
-
-			}
-			else {
-				theWindow->mueve_cofre += 10.0;
-			}
+		if (theWindow->angulocola < -40.0)
+		{
+		}
+		else
+		{
+			theWindow->angulocola -= 10.0;
+		}
 	}
-
-	if (key == GLFW_KEY_Z) {
-
-		theWindow->mover +=10.0;
-	}
-	if (key == GLFW_KEY_X) {
-
-		theWindow->mover -=10.0;
-	}
-		
-
-
-
 	
 
 
-	if (key == GLFW_KEY_D && action == GLFW_PRESS)
-	{
-		const char* key_name = glfwGetKeyName(GLFW_KEY_D, 0);
-		//printf("se presiono la tecla: %s\n",key_name);
-	}
 
 	if (key >= 0 && key < 1024)
 	{
