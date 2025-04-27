@@ -1,0 +1,13 @@
+﻿  practica9avanzada.cpp
+C:\Users\samyc\Documents\Visual Studio 2022\Practicas\Practica\Practica\Window.h(12,36): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+  (compilando archivo de origen "practica9avanzada.cpp")
+  
+C:\Users\samyc\Documents\Visual Studio 2022\Practicas\Practica\Practica\Window.h(13,37): warning C4244: 'return': conversión de 'GLint' a 'GLfloat'; posible pérdida de datos
+  (compilando archivo de origen "practica9avanzada.cpp")
+  
+C:\Users\samyc\Documents\Visual Studio 2022\Practicas\Practica\Practica\practica9avanzada.cpp(408,15): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\samyc\Documents\Visual Studio 2022\Practicas\Practica\Practica\practica9avanzada.cpp(410,33): warning C4244: '+=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\samyc\Documents\Visual Studio 2022\Practicas\Practica\Practica\practica9avanzada.cpp(695,21): warning C4305: '+=': truncamiento de 'double' a 'float'
+C:\Users\samyc\Documents\Visual Studio 2022\Practicas\Practica\Practica\practica9avanzada.cpp(773,21): warning C4305: '=': truncamiento de 'double' a 'float'
+C:\Users\samyc\Documents\Visual Studio 2022\Practicas\Practica\Practica\practica9avanzada.cpp(794,13): warning C4305: '+=': truncamiento de 'double' a 'float'
+  Practica.vcxproj -> C:\Users\samyc\Documents\Visual Studio 2022\Practicas\Practica\Debug\Practica.exe

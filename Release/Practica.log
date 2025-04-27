@@ -1,0 +1,54 @@
+﻿  Camera.cpp
+C:\Users\samyc\Documents\Visual Studio 2022\Practicas\Practica\Practica\Camera.h(3,10): error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  (compilando archivo de origen "Camera.cpp")
+  
+  DirectionalLight.cpp
+C:\Users\samyc\Documents\Visual Studio 2022\Practicas\Practica\Practica\Light.h(3,10): error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  (compilando archivo de origen "DirectionalLight.cpp")
+  
+  Light.cpp
+C:\Users\samyc\Documents\Visual Studio 2022\Practicas\Practica\Practica\Light.h(3,10): error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  (compilando archivo de origen "Light.cpp")
+  
+  Material.cpp
+C:\Users\samyc\Documents\Visual Studio 2022\Practicas\Practica\Practica\Material.h(3,10): error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  (compilando archivo de origen "Material.cpp")
+  
+  Mesh_tn.cpp
+C:\Users\samyc\Documents\Visual Studio 2022\Practicas\Practica\Practica\Mesh.h(3,10): error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  (compilando archivo de origen "Mesh_tn.cpp")
+  
+  Model.cpp
+C:\Users\samyc\Documents\Visual Studio 2022\Practicas\Practica\Practica\Model.h(4,9): error C1083: No se puede abrir el archivo incluir: 'assimp/Importer.hpp': No such file or directory
+  (compilando archivo de origen "Model.cpp")
+  
+  PointLight.cpp
+C:\Users\samyc\Documents\Visual Studio 2022\Practicas\Practica\Practica\Light.h(3,10): error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  (compilando archivo de origen "PointLight.cpp")
+  
+  practica9avanzada.cpp
+C:\Users\samyc\Documents\Visual Studio 2022\Practicas\Practica\Practica\practica9avanzada.cpp(20,10): error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  Shader_light.cpp
+C:\Users\samyc\Documents\Visual Studio 2022\Practicas\Practica\Practica\Shader_light.h(7,10): error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  (compilando archivo de origen "Shader_light.cpp")
+  
+  Skybox.cpp
+C:\Users\samyc\Documents\Visual Studio 2022\Practicas\Practica\Practica\Skybox.h(6,9): error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  (compilando archivo de origen "Skybox.cpp")
+  
+  Sphere.cpp
+C:\Users\samyc\Documents\Visual Studio 2022\Practicas\Practica\Practica\definition.h(11,10): error C1083: No se puede abrir el archivo incluir: 'glm.hpp': No such file or directory
+  (compilando archivo de origen "Sphere.cpp")
+  
+  SpotLight.cpp
+C:\Users\samyc\Documents\Visual Studio 2022\Practicas\Practica\Practica\Light.h(3,10): error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  (compilando archivo de origen "SpotLight.cpp")
+  
+  Texture.cpp
+C:\Users\samyc\Documents\Visual Studio 2022\Practicas\Practica\Practica\Texture.h(2,9): error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  (compilando archivo de origen "Texture.cpp")
+  
+  Window.cpp
+C:\Users\samyc\Documents\Visual Studio 2022\Practicas\Practica\Practica\Window.h(3,9): error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  (compilando archivo de origen "Window.cpp")
+  
